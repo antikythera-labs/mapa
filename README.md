@@ -53,7 +53,7 @@ MAPA is the only project we know of building all three.
 ```
 mapa/
 ├── contracts/      Solidity 0.8.24 + Foundry (BetMarket, ArenaRegistry, OddsOracle)
-├── frontend/       Next.js 14 + wagmi v2 + RainbowKit + Tailwind + shadcn/ui
+├── frontend/       Next.js 16 + wagmi v2 + RainbowKit + Tailwind + shadcn/ui
 ├── scripts/        Off-chain pipeline (TS): indexer, oracle signer, seed scripts
 ├── .env.example    Template for environment variables
 └── README.md       This file
@@ -62,7 +62,7 @@ mapa/
 ## Tech stack
 
 - **Smart contracts:** Solidity 0.8.24, Foundry, OpenZeppelin
-- **Frontend:** Next.js 14 (App Router), wagmi v2, RainbowKit, Tailwind, shadcn/ui
+- **Frontend:** Next.js 16 (App Router), wagmi v2, RainbowKit, Tailwind, shadcn/ui
 - **Off-chain:** Node 20 + TypeScript, viem, pino
 - **Network:** Mantle Sepolia (chain 5003) for dev, Mantle Mainnet (chain 5000) for production
 - **Inference:** Allora Network on-chain feeds
