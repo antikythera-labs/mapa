@@ -1,0 +1,25 @@
+{
+  "name": "mapa-scripts",
+  "version": "0.0.1",
+  "private": true,
+  "description": "MAPA off-chain pipeline: oracle signer, agent indexer, seed scripts",
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "oracle-signer": "tsx src/oracle-signer.ts",
+    "seed-agents": "tsx src/seed-agents.ts",
+    "index-clawhack": "tsx src/index-clawhack.ts",
+    "smoke-test": "tsx src/smoke-test.ts"
+  },
+  "dependencies": {
+    "viem": "^2.31.0",
+    "dotenv": "^16.4.5",
+    "pino": "^9.5.0",
+    "pino-pretty": "^11.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  }
+}

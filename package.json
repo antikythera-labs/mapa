@@ -1,0 +1,10 @@
+{
+  "name": "mapa",
+  "version": "0.0.1",
+  "private": true,
+  "description": "MAPA — Mantle Agent PnL Arena. Public on-chain arena where spectators bet on AI trading agents.",
+  "homepage": "https://github.com/antikythera-labs/mapa",
+  "license": "MIT",
+  "author": "Antikythera Labs",
+  "keywords": ["mantle", "ai-agents", "prediction-market", "erc-8004", "hackathon"]
+}

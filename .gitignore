@@ -1,0 +1,51 @@
+# Business context (private to team)
+.business/
+
+# Claude Code local config
+.claude/
+
+# Research tooling (DoraHacks scrapers, etc.)
+tools/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# Node
+node_modules/
+.pnpm-store/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Next.js
+frontend/.next/
+frontend/out/
+frontend/build/
+frontend/.vercel
+frontend/next-env.d.ts
+
+# Foundry
+contracts/out/
+contracts/cache/
+contracts/broadcast/
+contracts/.gas-snapshot
+
+# TypeScript
+*.tsbuildinfo
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Local artifacts
+tmp/
+*.local
