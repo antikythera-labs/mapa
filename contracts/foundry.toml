@@ -27,8 +27,9 @@ mantle_sepolia = "${MANTLE_SEPOLIA_RPC_URL}"
 [etherscan]
 # Etherscan API V2 unified endpoint — single key works across 60+ EVM chains.
 # Mantlescan migrated to Etherscan V2 in 2026 — get key at https://etherscan.io/myapikey
-mantle_mainnet = { key = "${MANTLESCAN_API_KEY}", url = "https://api.etherscan.io/v2/api", chain = 5000 }
-mantle_sepolia = { key = "${MANTLESCAN_API_KEY}", url = "https://api.etherscan.io/v2/api", chain = 5003 }
+# V2 requires chainid as query parameter (not just `chain` field) for verification calls.
+mantle_mainnet = { key = "${MANTLESCAN_API_KEY}", url = "https://api.etherscan.io/v2/api?chainid=5000", chain = 5000 }
+mantle_sepolia = { key = "${MANTLESCAN_API_KEY}", url = "https://api.etherscan.io/v2/api?chainid=5003", chain = 5003 }
 
 [fmt]
 line_length = 120

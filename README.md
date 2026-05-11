@@ -4,6 +4,7 @@
 
 **Status:** under active development for the [Mantle Turing Test Hackathon 2026](https://dorahacks.io/hackathon/mantle-turing-test). Submission deadline: 2026-06-15 15:59 UTC.
 
+**Contracts (Sepolia):** deployed and verified on [Mantlescan](https://sepolia.mantlescan.xyz/) — see [Deployed addresses](#deployed-addresses).
 **Live demo (Sepolia):** _coming soon_
 **Live demo (Mainnet):** _coming soon_
 
@@ -96,13 +97,18 @@ npm run smoke-test
 
 ## Deployed addresses
 
-> Will be filled in as deployment lands. Track progress in the [project board](https://github.com/antikythera-labs/mapa/projects).
+**Mantle Sepolia (chain 5003)** — deployed and verified on Mantlescan, 2026-05-11.
 
 | Contract | Mantle Sepolia | Mantle Mainnet |
 |---|---|---|
-| `ArenaRegistry`  | _pending_ | _pending_ |
-| `BetMarket`      | _pending_ | _pending_ |
-| `OddsOracle`     | _pending_ | _pending_ |
+| `MockUSDC`                 | [`0xB4B6b0Df73FAd5B04CcE4436FB79F8bddb9e0d3D`](https://sepolia.mantlescan.xyz/address/0xB4B6b0Df73FAd5B04CcE4436FB79F8bddb9e0d3D) | n/a — uses canonical [`0x09Bc4E0D…`](https://mantlescan.xyz/address/0x09Bc4E0D864854c6aFB6eB9A9cdF58aC190D0dF9) |
+| `MockReputation`           | [`0x1FfB5FD6B3F84Cdb805AFC6796B0BA64828b24c6`](https://sepolia.mantlescan.xyz/address/0x1FfB5FD6B3F84Cdb805AFC6796B0BA64828b24c6) | _pending Phase E_ |
+| `ArenaRegistry`            | [`0xBAf698174888228DAac3c245361a9981c27dc692`](https://sepolia.mantlescan.xyz/address/0xBAf698174888228DAac3c245361a9981c27dc692) | _pending Phase E_ |
+| `OddsOracle`               | [`0xAD76538C09785C9C0dCD67A56E9656274fdCe890`](https://sepolia.mantlescan.xyz/address/0xAD76538C09785C9C0dCD67A56E9656274fdCe890) | _pending Phase E_ |
+| `BetMarket`                | [`0x341bA158c2367a49EE2097842e671Dc3510F654f`](https://sepolia.mantlescan.xyz/address/0x341bA158c2367a49EE2097842e671Dc3510F654f) | _pending Phase E_ |
+| `ERC8004ReputationAdapter` | [`0x7636c039224255388F2351a387623842fa784f2f`](https://sepolia.mantlescan.xyz/address/0x7636c039224255388F2351a387623842fa784f2f) | _pending Phase E_ |
+
+Reference: ERC-8004 Reputation Registry [`0x8004B663…`](https://sepolia.mantlescan.xyz/address/0x8004B663056A597Dffe9eCcC1965A193B7388713) (Sepolia) · [`0x8004BAa1…`](https://mantlescan.xyz/address/0x8004BAa17C55a88189AE136b182e5fdA19dE9b63) (Mainnet).
 
 ## Roadmap
 
