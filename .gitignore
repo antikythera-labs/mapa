@@ -49,3 +49,7 @@ logs/
 # Local artifacts
 tmp/
 *.local
+
+# Off-chain pipeline per-run artefacts (orchestrator decision snapshots).
+# Stable manifests like agents.json are kept in git.
+scripts/data/decisions-*.json

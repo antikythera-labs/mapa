@@ -8,8 +8,10 @@
     "build": "tsc -p tsconfig.json",
     "oracle-signer": "tsx src/oracle-signer.ts",
     "seed-agents": "tsx src/seed-agents.ts",
-    "index-clawhack": "tsx src/index-clawhack.ts",
-    "smoke-test": "tsx src/smoke-test.ts"
+    "verify-seed": "tsx src/verify-seed.ts",
+    "preflight": "tsx src/preflight.ts",
+    "smoke-test": "tsx src/smoke-test.ts",
+    "orchestrator": "tsx src/llm-orchestrator.ts"
   },
   "dependencies": {
     "viem": "^2.31.0",

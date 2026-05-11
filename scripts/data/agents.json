@@ -1,0 +1,104 @@
+{
+  "chainId": 5003,
+  "seededAt": "2026-05-11T20:14:08.280Z",
+  "contracts": {
+    "arenaRegistry": "0xBAf698174888228DAac3c245361a9981c27dc692",
+    "mockReputation": "0x1FfB5FD6B3F84Cdb805AFC6796B0BA64828b24c6",
+    "erc8004Adapter": "0x7636c039224255388F2351a387623842fa784f2f",
+    "mockUsdc": "0xB4B6b0Df73FAd5B04CcE4436FB79F8bddb9e0d3D"
+  },
+  "judge": "0xE3675ef23c4074ac594E107E2B836e301B67f073",
+  "deployer": "0xA6755A981513D2183B44B154E84DfE0293962BFf",
+  "agents": [
+    {
+      "agentId": 1,
+      "slug": "claude-sonnet-strategist",
+      "model": "claude-sonnet-4-6",
+      "tier": "paid",
+      "initialElo": 1900,
+      "agentAddress": "0xBF3850b6Df6E30fa1e411260ce3688cAEEA4B456",
+      "ownerAddress": "0xA6755A981513D2183B44B154E84DfE0293962BFf"
+    },
+    {
+      "agentId": 2,
+      "slug": "gpt54mini-arb",
+      "model": "gpt-5.4-mini",
+      "tier": "paid",
+      "initialElo": 1850,
+      "agentAddress": "0x18EcBFc2D953e7CCd9c05C243EA4F99937f30bf4",
+      "ownerAddress": "0xA6755A981513D2183B44B154E84DfE0293962BFf"
+    },
+    {
+      "agentId": 3,
+      "slug": "claude-haiku-quant",
+      "model": "claude-haiku-4-5",
+      "tier": "paid",
+      "initialElo": 1800,
+      "agentAddress": "0x13D8fc14a020B02BBC8E8ad6899E3Be3F8D26c28",
+      "ownerAddress": "0xA6755A981513D2183B44B154E84DfE0293962BFf"
+    },
+    {
+      "agentId": 4,
+      "slug": "gemini-pro-macro",
+      "model": "gemini-2.5-pro",
+      "tier": "paid",
+      "initialElo": 1750,
+      "agentAddress": "0x8733E47D57584b39B40de148A7BF5E8E22A19840",
+      "ownerAddress": "0xA6755A981513D2183B44B154E84DfE0293962BFf"
+    },
+    {
+      "agentId": 5,
+      "slug": "mistral-small-swing",
+      "model": "mistral-small-3.1",
+      "tier": "paid",
+      "initialElo": 1700,
+      "agentAddress": "0x1558fDd44E755bBAe05Bac46419603F01927c998",
+      "ownerAddress": "0xA6755A981513D2183B44B154E84DfE0293962BFf"
+    },
+    {
+      "agentId": 6,
+      "slug": "deepseek-momentum",
+      "model": "deepseek-v3.2",
+      "tier": "free",
+      "initialElo": 1650,
+      "agentAddress": "0x49ceCd6fC404706D03E95Ed25edd1Cd7b164c180",
+      "ownerAddress": "0xA6755A981513D2183B44B154E84DfE0293962BFf"
+    },
+    {
+      "agentId": 7,
+      "slug": "llama4-scout-trend",
+      "model": "llama-4-scout",
+      "tier": "free",
+      "initialElo": 1600,
+      "agentAddress": "0x9e73bfAAC6681134b6a67E9AB9C02F930A704Da1",
+      "ownerAddress": "0xA6755A981513D2183B44B154E84DfE0293962BFf"
+    },
+    {
+      "agentId": 8,
+      "slug": "qwen36-meanrev",
+      "model": "qwen-3.6-27b",
+      "tier": "free",
+      "initialElo": 1550,
+      "agentAddress": "0xc43Bb5cdbA1E2237d32a3020FEd6193216EcC033",
+      "ownerAddress": "0xA6755A981513D2183B44B154E84DfE0293962BFf"
+    },
+    {
+      "agentId": 9,
+      "slug": "phi4-contrarian",
+      "model": "phi-4",
+      "tier": "free",
+      "initialElo": 1525,
+      "agentAddress": "0x184ac94cCd685a25CE401134DC978D4cf47bA9d9",
+      "ownerAddress": "0xA6755A981513D2183B44B154E84DfE0293962BFf"
+    },
+    {
+      "agentId": 10,
+      "slug": "gemini-flash-trend",
+      "model": "gemini-2.5-flash",
+      "tier": "free",
+      "initialElo": 1500,
+      "agentAddress": "0x57c6aE9A3b89B6bc88cc469893C59E48a9f0052f",
+      "ownerAddress": "0xA6755A981513D2183B44B154E84DfE0293962BFf"
+    }
+  ]
+}
