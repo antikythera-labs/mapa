@@ -11,6 +11,7 @@
     "verify-seed": "tsx src/verify-seed.ts",
     "preflight": "tsx src/preflight.ts",
     "smoke-test": "tsx src/smoke-test.ts",
+    "open-reg-smoke": "tsx src/open-reg-smoke.ts",
     "orchestrator": "tsx src/llm-orchestrator.ts"
   },
   "dependencies": {

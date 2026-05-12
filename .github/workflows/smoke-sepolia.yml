@@ -1,0 +1,76 @@
+name: smoke-sepolia
+
+# Manual smoke check against the live Mantle Sepolia deployment.
+# Triggered via the Actions tab → "Run workflow". Not run on every push because
+# each invocation costs ~0.02 MNT in real gas. Use when validating a redeploy
+# or a non-trivial scripts/ change before merging.
+#
+# Required repository secrets (Settings → Secrets and variables → Actions):
+#   MANTLE_SEPOLIA_RPC_URL
+#   DEPLOYER_PRIVATE_KEY
+#   ORACLE_PRIVATE_KEY
+#   JUDGE_PRIVATE_KEY
+#   AGENTS_SEED
+#   USDC_ADDRESS_SEPOLIA
+#   NEXT_PUBLIC_ARENA_REGISTRY_ADDRESS
+#   NEXT_PUBLIC_BET_MARKET_ADDRESS
+#   NEXT_PUBLIC_MOCK_REPUTATION_ADDRESS
+#   NEXT_PUBLIC_ERC8004_ADAPTER_ADDRESS
+
+on:
+  workflow_dispatch:
+    inputs:
+      target:
+        description: 'Which smoke to run'
+        required: true
+        default: 'smoke-test'
+        type: choice
+        options:
+          - smoke-test
+          - open-reg-smoke
+          - both
+
+permissions:
+  contents: read
+
+defaults:
+  run:
+    working-directory: scripts
+
+jobs:
+  smoke:
+    name: ${{ inputs.target }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      MANTLE_SEPOLIA_RPC_URL: ${{ secrets.MANTLE_SEPOLIA_RPC_URL }}
+      DEPLOYER_PRIVATE_KEY: ${{ secrets.DEPLOYER_PRIVATE_KEY }}
+      ORACLE_PRIVATE_KEY: ${{ secrets.ORACLE_PRIVATE_KEY }}
+      JUDGE_PRIVATE_KEY: ${{ secrets.JUDGE_PRIVATE_KEY }}
+      AGENTS_SEED: ${{ secrets.AGENTS_SEED }}
+      USDC_ADDRESS_SEPOLIA: ${{ secrets.USDC_ADDRESS_SEPOLIA }}
+      NEXT_PUBLIC_ARENA_REGISTRY_ADDRESS: ${{ secrets.NEXT_PUBLIC_ARENA_REGISTRY_ADDRESS }}
+      NEXT_PUBLIC_BET_MARKET_ADDRESS: ${{ secrets.NEXT_PUBLIC_BET_MARKET_ADDRESS }}
+      NEXT_PUBLIC_MOCK_REPUTATION_ADDRESS: ${{ secrets.NEXT_PUBLIC_MOCK_REPUTATION_ADDRESS }}
+      NEXT_PUBLIC_ERC8004_ADAPTER_ADDRESS: ${{ secrets.NEXT_PUBLIC_ERC8004_ADAPTER_ADDRESS }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: scripts/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run smoke-test
+        if: ${{ inputs.target == 'smoke-test' || inputs.target == 'both' }}
+        run: npm run smoke-test
+
+      - name: Run open-reg-smoke
+        if: ${{ inputs.target == 'open-reg-smoke' || inputs.target == 'both' }}
+        run: npm run open-reg-smoke
